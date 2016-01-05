@@ -199,8 +199,8 @@ func NewStringFormatter(format string) (*stringFormatter, error) {
 		Id:     12345,
 		Time:   t,
 		Module: "logger",
+		Args:   []interface{}{"go"},
 		fmt:    "hello %s",
-		args:   []interface{}{"go"},
 	}
 	if err := fmter.Format(0, r, &bytes.Buffer{}); err != nil {
 		return nil, err
